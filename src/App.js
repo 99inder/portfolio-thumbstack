@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import "./App.css"
+import Navbar from './components/common/Navbar'
+import HeroSection from './components/HeroSection'
+import ProjectsSection from './components/ProjectsSection/ProjectsSection'
+import SkillSection from './components/SkillSection'
+import ContactForm from './components/common/ContactForm'
+import Footer from './components/common/Footer'
+import { Toaster } from 'react-hot-toast'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='wrapper'>
+      <div className="container">
+        <Navbar />
+        <HeroSection />
+      </div>
+      <ProjectsSection />
+      <SkillSection />
+      <ContactForm />
+      <Footer />
+      <Toaster />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
