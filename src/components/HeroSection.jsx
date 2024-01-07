@@ -1,8 +1,8 @@
 import React from 'react'
 import { imgsData, userImg, typedData } from '../assets/data/heroSectionData'
-import Typed from 'react-typed';
+import { TypeAnimation } from 'react-type-animation'
 
-const HeroSection = () => {
+const HeroSection = ({ contactRef }) => {
   return (
     <div className="hero-section">
 
@@ -12,13 +12,12 @@ const HeroSection = () => {
         <div className="hero-section-heading">Hi! John Doe</div>
 
         <div className="hero-section-heading hero-section-sub-heading">
-          I am a <Typed
+          I am a <TypeAnimation
             className='role'
-            strings={typedData}
-            loop={true}
-            typeSpeed={40}
-            backSpeed={35}
-            backDelay={1500}
+            sequence={typedData}
+            wrapper="span"
+            speed={40}
+            repeat={Infinity}
           />
         </div>
 

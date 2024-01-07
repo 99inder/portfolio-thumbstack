@@ -19,18 +19,31 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-        // make API call
 
-        // reset form state
+        // Form validation
+        if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+            toast.error("All fields are required");
+            return;
+        }
+
+        // Additional validation for email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            toast.error("Invalid email format");
+            return;
+        }
+
+        // Make API call (replace this with your actual API call)
+
+        // Reset form state
         setFormData({
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-        })
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+        });
 
-        toast.success("Form Submitted Successfully")
+        toast.success("Form submitted successfully");
     }
 
     return (

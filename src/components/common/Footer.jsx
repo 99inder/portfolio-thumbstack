@@ -4,11 +4,11 @@ import navlinksData from '../../assets/data/navlinksData'
 const Footer = () => {
     return (
         <footer>
-            <div class="container">
-                <div class="footer-wrapper">
-                    <div class="footer-faded-text">John Doe</div>
+            <div className="container">
+                <div className="footer-wrapper">
+                    <div className="footer-faded-text">John Doe</div>
 
-                    <div class="link-wrapper">
+                    <div className="link-wrapper">
                         {
                             navlinksData.map(item => (
                                 <div key={item.id}>
@@ -18,7 +18,7 @@ const Footer = () => {
                         }
                     </div>
 
-                    <div class="icon-wrapper">
+                    <div className="icon-wrapper">
 
                         <FaLinkedin className="icon"/>
                         <FaGithub className="icon"/>

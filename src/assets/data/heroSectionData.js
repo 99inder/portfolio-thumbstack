@@ -31,10 +31,16 @@ export const imgsData = [
 
 export const userImg = userPhoto;
 
+const delay = 1500; // in ms
 export const typedData = [
     "Full Stack Developer",
+    delay,
     "Web Developer",
+    delay,
     "UI-UX Designer",
+    delay,
     "Backend Developer",
+    delay,
     "Coder",
+    delay,
 ];
